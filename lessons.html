@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script src="web.js" defer></script>
+    <title>¡Hola, Basico!</title>
+</head>
+<body>
+    <header>
+        <nav>
+               <a href="index.html">
+                 <img src="images/logo.png" alt="Logo" id="logo"/>
+               </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lessons.html">Lessons</a></li>
+            </ul>
+        </nav>
+        <h1>Fun Flashcard Lessons for Spanish Beginners</h1>
+        <h2>Learn useful phrases through quick and engaging lessons with flashcards.</h2>
+        <img src="images/hero img 2.png" alt="Hero Image" id="hero-image2"/>
+    </header>
+
+    <main>
+        <div class="lesson-progress">
+            <h2 id="lessonTitle">Select a Topic</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <div class="topic-selector">
+            <select id="topicSelect">
+                <option value="">-- Select a Topic --</option>
+                <option value="Greetings & Introductions">Greetings & Introductions</option>
+                <option value="Food & Eating">Food & Eating</option>
+                <option value="Travel & Directions">Travel & Directions</option>
+            </select>
+        </div>
+
+        <div class="flashcard-container" id="flashcardContainer">
+            <div class="flashcard" id="flashcard" onclick="flipCard()">
+                <div class="front">
+                    <div class="card-content" id="frontContent">Hello</div>
+                    <div class="instruction">Tap to flip</div>
+                </div>
+                <div class="back">
+                    <div class="card-content" id="backContent">Hola</div>
+                </div>
+            </div>
+            <button id="continueBtn" onclick="nextCard()">Continue</button>
+        </div>
+
+        <div class="navigation" id="navigation" style="display: none;">
+            <button id="prevBtn" onclick="previousCard()">Previous</button>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="social-section">
+                <div class="social">
+                    <a href="#"><img src="images/instagram.png" alt="Instagram icon"></a>
+                    <a href="#"><img src="images/facebook.png" alt="Facebook icon"></a>
+                </div>
+            </div>
+
+            <div class="subscribe-section">
+                <h3>Stay Connected!</h3>
+                <form action="/submit-email" method="post">
+                    <label for="email">Enter your email</label><br>
+                    <input type="email" id="email" name="email" required>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
